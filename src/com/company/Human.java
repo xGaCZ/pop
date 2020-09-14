@@ -1,13 +1,18 @@
 package com.company;
+import devices.Car;
+
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 
 public class Human {
     Animal pet;
-    Car mycar;
+   private Car mycar;
     Double salary=250.0;
 
+    public String toString(){
+        return pet+" "+mycar+"  "+salary;
+    }
 
     void addMyCar(Car car) {
         this.mycar = car; }
@@ -30,9 +35,23 @@ public class Human {
         return pet;
     }
 
+    public void setMyCar(Car myCar) {
+        if(salary>=myCar.price) {
+            System.out.println("nowa furka jest posiadana !");
+            addMyCar(myCar);
+        }else if (salary>(myCar.price/12)){
+            System.out.println("na kreche możesz kupić");
+            addMyCar(myCar);
+        }else {
+            System.out.println("idz być biedakiem gdzie indziej ");
+        }
+    }
+
     public Double getSalary() {
             System.out.println( " Data " + ZonedDateTime.now().format(DateTimeFormatter.RFC_1123_DATE_TIME) +" Siano " + salary);
         return salary;
+
+
 
 
 

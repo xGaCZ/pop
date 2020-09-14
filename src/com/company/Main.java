@@ -1,8 +1,7 @@
 package com.company;
 
 
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
+import devices.Car;
 
 public class Main {
 
@@ -17,11 +16,39 @@ public class Main {
         Animal.feed();
 
     Human human = new Human();
-    Car Golf = new Car();
-    human.addMyCar(Golf);/*
+    Car golf = new Car();
+    human.addMyCar(golf);/*
     System.out.println(ZonedDateTime.now().format(DateTimeFormatter.RFC_1123_DATE_TIME));
        */
-        human.getSalary();
+        Car pasat = new Car();
+        pasat.setColor("rudy");
+        pasat.setModel("B5");
+        pasat.setPrice(2745.0);
+        pasat.setProducer("Pasat starego SA.");
 
+        Car golfica = new Car();
+        golf.setColor("butelkowa zielen ");
+        golf.setModel("mk3");
+        golf.setPrice(999.0);
+        golf.setProducer("golfica kurwica coropration");
+
+
+
+        Car seat = new Car();
+        seat.setColor("blue");
+        seat.setModel("ibiza");
+        seat.setPrice(555.0);
+        seat.setProducer("SEAT ");
+
+        System.out.println("............................");
+        human.getSalary();
+        System.out.println("...........................");
+        System.out.println(seat.toString());
+        System.out.println("...........................");
+
+        human.setMyCar(seat);
+        human.setMyCar(golfica);
+        human.setMyCar(pasat);
+        human.addMyCar(seat);
 }
 }

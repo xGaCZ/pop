@@ -2,7 +2,7 @@ package com.company;
 
 public class Animal {
 
-    String species;
+    String species="dog";
     private Double weight;
 
     public Animal() { this.weight = 8.0;}
@@ -30,6 +30,8 @@ public class Animal {
             System.out.println("ryju mordo chyba mi sie zdechło  ");
         }
     }
-
+    public String toString(){
+        return species+" "+weight;
+    }
 
     }
