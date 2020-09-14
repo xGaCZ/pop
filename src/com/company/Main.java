@@ -1,6 +1,9 @@
 package com.company;
 
 
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,6 +18,10 @@ public class Main {
 
     Human human = new Human();
     Car Golf = new Car();
-    human.addMyCar(Golf);
+    human.addMyCar(Golf);/*
+    System.out.println(ZonedDateTime.now().format(DateTimeFormatter.RFC_1123_DATE_TIME));
+       */
+        human.getSalary();
+
 }
 }
