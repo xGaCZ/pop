@@ -12,5 +12,9 @@ public class Main {
         Animal.feed();
         Animal.feed();
         Animal.feed();
-    }
+
+    Human human = new Human();
+    Car Golf = new Car();
+    human.addMyCar(Golf);
+}
 }
