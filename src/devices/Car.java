@@ -1,6 +1,6 @@
 package devices;
 
-public class Car {
+public class Car extends Device {
     String model;
     String producer;
     String color;
@@ -10,6 +10,10 @@ public class Car {
     public String toString() {
 
         return model+" "+price+" "+color+" "+producer+" "+type;
+    }
+    public boolean turnOn() {
+        System.out.println("Turn On");
+        return true;
     }
     public Double getPrice() {return price;}
 

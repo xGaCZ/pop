@@ -2,6 +2,7 @@ package com.company;
 
 
 import devices.Car;
+import devices.Device;
 
 public class Main {
 
@@ -45,7 +46,19 @@ public class Main {
         System.out.println("...........................");
         System.out.println(seat.toString());
         System.out.println("...........................");
+        System.out.println("-----------------------------");
 
+
+        human.setMyCar(pasat);
+
+        Device device = new Device() {
+            public boolean turnOn() {
+                System.out.println("Turn On");
+                return true;
+            }
+        };
+
+        device.turnOn();
         human.setMyCar(seat);
         human.setMyCar(golfica);
         human.setMyCar(pasat);
