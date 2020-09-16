@@ -11,6 +11,7 @@ public class Car extends Device {
 
         return model+" "+price+" "+color+" "+producer+" "+type;
     }
+    @Override
     public boolean turnOn() {
         System.out.println("Turn On");
         return true;
